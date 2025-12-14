@@ -1,7 +1,18 @@
-﻿@page "{id?}"
+﻿@page "{num?}"
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+
+    string[] data = new[] { "one", "two", "three", "four", "five" };
+
+    Func<dynamic, object> hello =@<p class="display-4">Hello,@item!!</p>;
+    Func<dynamic, object> showList =
+        @<ul class="h4">
+            @foreach(var ob in item)
+            {
+                <li>@ob</li>
+            }
+        </ul>;
 }
 
 @* <div class="text-center">
@@ -25,21 +36,119 @@
 
     <form asp-page="Index">
         <div class="form-group">
-            <label asp-for="@Model.Name">Name</label>
-            <input asp-for="@Model.Name" class="form-control" />
+            @* <label asp-for="@Model.Name">Name</label>
+            <input asp-for="@Model.Name" class="form-control" /> *@
+
+            @Html.DisplayName("Name");
+            @Html.Editor("Name",new{ htmlAtrtributes = new {@class = "form-control"}})
         </div>
         <div class="form-group">
-            <label asp-for="@Model.Password">Password</label>
-            <input asp-for="@Model.Password" class="form-control" />
+            @* <label asp-for="@Model.Password">Password</label>
+            <input asp-for="@Model.Password" class="form-control" /> *@
+
+            @Html.DisplayNameFor(model => model.Password);
+            @Html.EditorFor(model => model.Password,new { htmlAttributes = new { @class = "form-control" } } )
         </div>
         <div class="form-group">
-            <label asp-for="@Model.Mail">Mail</label>
-            <input asp-for="@Model.Mail" class="form-control" />
+            @* <label asp-for="@Model.Mail">Mail</label>
+            <input asp-for="@Model.Mail" class="form-control" /> *@
+
+            @Html.DisplayName("Mail");
+            @Html.TextBox("Mail",@Model.Mail,new { @class = "form-control" })
         </div>
         <div class="form-group">
-            <label asp-for="@Model.Tel">Tel</label>
-            <input asp-for="@Model.Tel" class="form-control" />
+            @* <label asp-for="@Model.Tel">Tel</label>
+            <input asp-for="@Model.Tel" class="form-control" /> *@
+
+            @Html.DisplayName("Tel");
+            @Html.TextBoxFor(model => model.Tel,new { @class = "form-control" })
         </div>
         <input type="submit" class="btn btn-primary" />
     </form>
 </div>
+
+<div>
+    <h1 class="display-4 mb-4">Welcome2</h1>
+    <ul>
+        @{
+            int totalp = 0;
+            int totaln = 0;
+        }
+        @for(int i=2; i<=20; i++){
+            bool flg = true;
+
+            @for(int j=2; j<= i/2; j++)
+            {
+                @if(i%j == 0)
+                    {
+                        flg = false;
+                    }
+            }
+            @if (flg)
+            {
+                totalp += i;
+                <li>@i は素数です。(total:@totalp)</li>
+            }
+            else
+            {
+                totaln += i;
+                <li>@i は素数ではない。[total:@totaln]</li>
+            }
+        }
+    </ul>
+</div>
+
+<div>
+    <h1 class="display-4 mb-4">Welcome3</h1>
+    <p class="h4">
+        @Model.Num は、<b>@(Model.Num % 2 == 0? "偶数" : "奇数")</b>です。
+    </p>
+</div>
+
+<div>
+    <h1 class="display-4" mb-4>Welcome4</h1>
+    <div class="h4">
+        @{
+            int n = Model.Num * 2;
+            <Text>※整数 @Model.Num の2倍は、 @n です。</Text>
+        }
+    </div>
+</div>
+
+@functions{
+    string hello(string name)
+    {
+        return "Hello," + name + "!!";
+    }
+
+    int total(int n)
+    {
+        int re = 0;
+
+        for(int i=1; i<=n; i++)
+        {
+            re += i;
+        }
+
+        return re;
+    }
+}
+
+<div>
+    <h1 class="display-4" mb-4>Welcome5</h1>
+    <p class="h4">@hello("太郎")</p>
+    <p class="h4">@Model.Num の合計は、 @total(Model.Num) です。</p>
+</div>
+
+<div>
+    <h1 class="display-4" mb-4>Welcome6</h1>
+    <h1 class="display-4 mb-4">@hello("Hanako")</h1>
+    <p class="h4">@showList(data)</p>
+</div>
+
+@section between
+{
+    <p class="container alert alert-primary">
+        ※これはヘッダーとコンテンツの間に表示されます。
+    </p>
+}

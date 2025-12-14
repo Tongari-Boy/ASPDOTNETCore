@@ -43,6 +43,9 @@ namespace SampleRazorApp.Pages
         [DataType(DataType.PhoneNumber)]
         public string Tel { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public int Num { get; set; }
+
 
         public void OnGet()
         {
