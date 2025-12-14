@@ -1,33 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Index/Hello";
-    var name = ViewData["name"];
-    var mail = ViewData["mail"];
-    var tel = ViewData["tel"];
+    // var name = ViewData["name"];
+    // var mail = ViewData["mail"];
+    // var tel = ViewData["tel"];
 
-    var list = ViewData["list"];
+    // var list = ViewData["list"];
 
-    List<string> data = (List<string>)ViewData["listdata"];
-    List<SelectListItem> listdata = new List<SelectListItem>();
-    foreach(string item in data)
-    {
-        listdata.Add(new SelectListItem { Value = item, Text = item });
-    }
+    // List<string> data = (List<string>)ViewData["listdata"];
+    // List<SelectListItem> listdata = new List<SelectListItem>();
+    // foreach(string item in data)
+    // {
+    //     listdata.Add(new SelectListItem { Value = item, Text = item });
+    // }
 }
 
 <div class="text-center">
-    <h1>Index</h1>
+    <h1 class="display-3">Index</h1>
     @* <p>This is sample page;</p> *@
-    <p class="h5">@ViewData["Message"]</p>
+    <p class="h4" mb-4>@ViewData["message"]</p>
+    <p class="h5">Value = @ViewData["object"]</p>
 </div>
 
-<div class="text-left">
+@* <div class="text-left">
     <h1 class="display-3">Index</h1>
     <p class="h4 mb4">@ViewData["Message"]</p>
     <form method="post" asp-controller="Hello" asp-action="Form">
-        @* <div class="form-group">
+        <div class="form-group">
             <label form="msg">Message</label>
             <input type="text" name="msg" id="msg" class="form-control"/>
-        </div> *@
+        </div> 
         <div class="form-group">
             <label for="@name" class="h5">@name</label>
             <input asp-for="@name" class="form-control" />
@@ -49,5 +50,14 @@
             <input type="submit" class="btn btn-primary" />
         </div>
     </form>
-</div>
+</div> *@
 
+
+<div class="text-left">
+    <h1 class="display-3">Index</h1>
+    <p class="h4 mb-4">@ViewData["message"]</p>
+    <ul class="h5">
+        <li>@ViewData["id"]</li>
+        <li>@ViewData["namae"]</li>
+    </ul>
+</div>

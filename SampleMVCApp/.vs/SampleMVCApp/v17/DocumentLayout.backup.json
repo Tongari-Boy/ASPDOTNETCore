@@ -9,6 +9,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{9E50C0DD-ADFD-421E-8634-2CC73EED422D}|SampleMVCApp\\SampleMVCApp.csproj|e:\\aspdotnetcore\\samplemvcapp\\samplemvcapp\\views\\hello\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9E50C0DD-ADFD-421E-8634-2CC73EED422D}|SampleMVCApp\\SampleMVCApp.csproj|solutionrelative:samplemvcapp\\views\\hello\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E50C0DD-ADFD-421E-8634-2CC73EED422D}|SampleMVCApp\\SampleMVCApp.csproj|e:\\aspdotnetcore\\samplemvcapp\\samplemvcapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E50C0DD-ADFD-421E-8634-2CC73EED422D}|SampleMVCApp\\SampleMVCApp.csproj|solutionrelative:samplemvcapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +40,7 @@
               "RelativeDocumentMoniker": "SampleMVCApp\\Views\\Hello\\Index.cshtml",
               "ToolTip": "E:\\ASPDOTNETCore\\SampleMVCApp\\SampleMVCApp\\Views\\Hello\\Index.cshtml",
               "RelativeToolTip": "SampleMVCApp\\Views\\Hello\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-14T08:39:43.791Z",
               "EditorCaption": ""
@@ -49,9 +53,22 @@
               "RelativeDocumentMoniker": "SampleMVCApp\\Controllers\\HelloController.cs",
               "ToolTip": "E:\\ASPDOTNETCore\\SampleMVCApp\\SampleMVCApp\\Controllers\\HelloController.cs",
               "RelativeToolTip": "SampleMVCApp\\Controllers\\HelloController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvykAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAnwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T08:36:24.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\ASPDOTNETCore\\SampleMVCApp\\SampleMVCApp\\Program.cs",
+              "RelativeDocumentMoniker": "SampleMVCApp\\Program.cs",
+              "ToolTip": "E:\\ASPDOTNETCore\\SampleMVCApp\\SampleMVCApp\\Program.cs",
+              "RelativeToolTip": "SampleMVCApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:10:09.785Z",
               "EditorCaption": ""
             }
           ]
